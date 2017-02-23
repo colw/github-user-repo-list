@@ -2,7 +2,7 @@ import React from 'react';
 import { debounce } from 'lodash'
 import { FetchComponent, LinkExt } from './components'
 
-const DELAY_MS = 100;
+const DELAY_MS = 300;
 
 export default class RepoList extends FetchComponent {
   constructor(props) {

@@ -16,11 +16,13 @@ All view components are tested for rendering, others are tested for their respec
 
 ## Libraries
 
-This small app was built using React, and is accessible online at [colwghurl.herokuapp.com](https://colwghurl.herokuapp.com/). 
+This small app was built using [React](https://github.com/facebook/react) and is accessible online at [colwghurl.herokuapp.com](https://colwghurl.herokuapp.com/). 
 
-I used [Lodash](https://lodash.com/) to debounce the user search input (i.e. delay the async request).
+- [Lodash](https://lodash.com/) was used to debounce the user search input (i.e. delay the async request).
 
-For CSS I used [Normalize.css](https://necolas.github.io/normalize.css/) and [Skeleton](http://getskeleton.com/), along with some additional tweaks done locally.
+- I used [React-Router V4](https://reacttraining.com/react-router/) for routing. Due to the implementation if you enter a user path directly in the URL, it will result in a 404. You must begin from the root url.
+
+- For CSS I used [Normalize.css](https://necolas.github.io/normalize.css/) and [Skeleton](http://getskeleton.com/), along with some additional tweaks done locally.
 
 # Create React App
 

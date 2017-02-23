@@ -5,14 +5,18 @@
 - Enter an access token if required.
 - Type the name of a user to obtain a list of their repositories.
 
-## Note
+## Notes
 **Request Quota**
 
 The app will use up your free requests quota and let you know when it is exceeded. To avoid this, get a [Personal Access Token](https://github.com/settings/tokens) to continue using the app.
 
+**Tests**
+
+All view components are tested for rendering, others are tested for their respective methods.
+
 ## Libraries
 
-This was built using React.
+This small app was built using React, and is accessible online at [colwghurl.herokuapp.com](https://colwghurl.herokuapp.com/). 
 
 # Create React App
 

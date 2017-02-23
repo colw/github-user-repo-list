@@ -20,6 +20,7 @@ export default class RepoList extends FetchComponent {
  
   }
   componentDidMount() {
+    this.fetchData = debounce(this.fetchData, DELAY_MS);
     this.fetchData();
   }
 
@@ -54,7 +55,7 @@ export default class RepoList extends FetchComponent {
     }
   }
 
-  fetchData = debounce(() => {
+  fetchData = () => {
     const path = `${this.API_ENDPOINT}/${this.props.match.params.userId}/repos`;
     const opts = { headers: this.state.headers }
     console.debug('opts', opts);
@@ -63,7 +64,7 @@ export default class RepoList extends FetchComponent {
       .then(this.handleJSON)
       .then((data) => this.setState({list: data}))
       .catch(this.handleErrors);
-  }, DELAY_MS)
+  }
   
   render () {
 

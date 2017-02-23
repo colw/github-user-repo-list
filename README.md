@@ -24,7 +24,7 @@ All view components are tested for rendering, others are tested for their respec
 
 ## Libraries
 
-This small app was built using [React](https://github.com/facebook/react) and is accessible online at [colwghurl.herokuapp.com](https://colwghurl.herokuapp.com/). 
+This small, responsive app was built using [React](https://github.com/facebook/react) and is accessible online at [colwghurl.herokuapp.com](https://colwghurl.herokuapp.com/). 
 
 - [Lodash](https://lodash.com/) was used to debounce the user search input (i.e. delay the async request).
 

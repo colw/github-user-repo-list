@@ -1,9 +1,17 @@
 # Github User Repository Listing
 
 ## Usage
+  
+Run from the root directory
+```sh
+  npm install
+  npm start
+```
 
 - Enter an access token if required.
 - Type the name of a user to obtain a list of their repositories.
+
+See below for more options.
 
 ## Notes
 **Request Quota**

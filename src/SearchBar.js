@@ -9,14 +9,14 @@ export default class SearchBar extends Component {
   }
 
   onChange = (e) => {
-    this.setState({text: e.target.value}, this.pushView)
+    this.setState({text: e.target.value.toLowerCase()}, this.pushView)
   }
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.pushView();
-    
+    this.pushView();    
   }
+  
   pushView() {
     const path = this.state.text ? `/user/${this.state.text}` : '/';
     this.props.push(path, {user404: this.state.text});

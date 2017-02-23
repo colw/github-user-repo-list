@@ -8,8 +8,9 @@ form, label, input {
 }
 
 input {
-	width: 99%;
+	width: 95%;
 	font-size: 2rem;
+	margin: 0.5rem 0.5;
 }
 
 a {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { debounce } from 'lodash'
 import { FetchComponent, LinkExt } from './components'
 
 export default class RepoList extends FetchComponent {
@@ -51,7 +52,7 @@ export default class RepoList extends FetchComponent {
     }
   }
 
-  fetchData = () => {
+  fetchData = debounce(() => {
     const path = `${this.API_ENDPOINT}/${this.props.match.params.userId}/repos`;
     const opts = { headers: this.state.headers }
     console.debug('opts', opts);
@@ -60,13 +61,13 @@ export default class RepoList extends FetchComponent {
       .then(this.handleJSON)
       .then((data) => this.setState({list: data}))
       .catch(this.handleErrors);
-  }
+  }, 500)
   
   render () {
 
     // Avatar, just in case at a later date.
     // <td><div><img className="u-max-full-width" src={x.owner.avatar_url} /></div></td>
-    
+
     const repos = this.state.list.map((x,y) => (
       <tr key={x.id}>
         <td>

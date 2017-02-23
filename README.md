@@ -18,6 +18,8 @@ All view components are tested for rendering, others are tested for their respec
 
 This small app was built using React, and is accessible online at [colwghurl.herokuapp.com](https://colwghurl.herokuapp.com/). 
 
+For CSS I used [Normalize.css](https://necolas.github.io/normalize.css/) and [Skeleton](http://getskeleton.com/), along with some additional tweaks done locally.
+
 # Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

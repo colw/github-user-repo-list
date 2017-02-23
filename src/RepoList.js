@@ -2,6 +2,8 @@ import React from 'react';
 import { debounce } from 'lodash'
 import { FetchComponent, LinkExt } from './components'
 
+const DELAY_MS = 100;
+
 export default class RepoList extends FetchComponent {
   constructor(props) {
     super(props);
@@ -48,7 +50,7 @@ export default class RepoList extends FetchComponent {
     } else if (status === 401 || status === 403) {
       this.pushErrorView("Not authorized, or rate limit exceeded");
     } else {
-      this.pushErrorView("Error");
+      this.pushErrorView("Connection Error");
     }
   }
 
@@ -61,9 +63,17 @@ export default class RepoList extends FetchComponent {
       .then(this.handleJSON)
       .then((data) => this.setState({list: data}))
       .catch(this.handleErrors);
-  }, 500)
+  }, DELAY_MS)
   
   render () {
+
+    if (this.state.list.length === 0) {
+      return (
+        <div className="error-container">
+          <h3>No repositories for this user</h3>
+        </div>
+      )
+    }
 
     // Avatar, just in case at a later date.
     // <td><div><img className="u-max-full-width" src={x.owner.avatar_url} /></div></td>

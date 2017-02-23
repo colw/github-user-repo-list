@@ -4,18 +4,19 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import RepoList from './RepoList';
 import SearchBar from './SearchBar';
 
+import 'normalize.css';
+import './skeleton.css';
 import './App.css';
 
 const NoMatch = ({location}) => (
-  <div>
+  <div className="error-container">
     <h3>{location.state}</h3>
   </div>
 )
 
 const TokenInput = (props) => (
-  <div>
-    <label>Token: </label>
-    <input {...props} />
+  <div className="token-container">
+    <input {...props} placeholder="Github token here" />
   </div>
 )
 

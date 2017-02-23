@@ -1,0 +1,35 @@
+label {
+	display: inline-block;
+	margin-right: 1rem;
+}
+
+form, label, input {
+	margin-bottom: 0;
+}
+
+input {
+	width: 99%;
+}
+
+a {
+	text-decoration: none;
+}
+.token-container, .input-container {
+	padding: 0.5rem 0.5rem;
+}
+
+.token-container {
+	color: #eee;
+	background-color: #333;
+}
+
+.input-container {
+	color: #eee;
+	background-color: #2a84b7;
+}
+
+.error-container {
+	text-align: center;
+	margin-top: 2rem;
+}
+

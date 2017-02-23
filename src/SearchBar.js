@@ -24,10 +24,9 @@ export default class SearchBar extends Component {
   
   render() {
     return (
-      <div>
+      <div className="input-container">
         <form onSubmit={this.onSubmit}>
-          <label>Username: </label>
-          <input value={this.state.text} onChange={this.onChange} />
+          <input value={this.state.text} onChange={this.onChange} placeholder="Search for Github user"/>
         </form>
       </div>
     );

@@ -63,15 +63,34 @@ export default class RepoList extends FetchComponent {
   }
   
   render () {
+
+    // Avatar, just in case at a later date.
+    // <td><div><img className="u-max-full-width" src={x.owner.avatar_url} /></div></td>
+    
     const repos = this.state.list.map((x,y) => (
-      <li key={x.id}><LinkExt href={x.html_url} >{x.name}</LinkExt></li>
+      <tr key={x.id}>
+        <td>
+          <LinkExt href={x.html_url} >{x.name}</LinkExt>
+        </td>
+        <td>
+          {x.stargazers_count}
+        </td>
+      </tr>
     ))
 
     return (
-      <div>
-        <div className="artist-list">
-          {repos || 'None'}
-        </div>
+      <div className="list-container u-full-width">
+        <table className="list-container u-full-width">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Stars</th>
+            </tr>
+          </thead>
+          <tbody>
+            {repos || (<tr><td>None</td></tr>)}
+          </tbody>
+        </table>
       </div>
     )
   }

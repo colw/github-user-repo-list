@@ -1,5 +1,5 @@
 import React from 'react';
-import { debounce } from 'lodash'
+import debounce from 'lodash/debounce';
 import { FetchComponent, LinkExt } from './components'
 
 const DELAY_MS = 300;
